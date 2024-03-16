@@ -9,9 +9,10 @@ class Category:
         self.name = name
         self.description = description
         self.products = products
-        self.all_quantity_category = 1
 
-        Category.all_unique_product += 1
+        Category.all_quantity_category += 1
+
+        Category.all_unique_product += len(self.products)
 
 
 class Product:
