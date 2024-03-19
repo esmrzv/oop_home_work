@@ -1,5 +1,3 @@
-
-
 class Category:
     all_quantity_category = 0
     all_unique_product = 0
@@ -24,10 +22,8 @@ class Category:
         self.__products.append(product)
 
     @property
-    def __str__(self):
+    def product_info(self):
         products_list = []
         for product in self.__products:
-            products_list.append(f"{product.name}, {product.price} руб. Остаток: {product.quantity}шт")
+            products_list.append(f"{product.name}, {product.__price} руб. Остаток: {product.quantity}шт")
         return products_list
-
-
