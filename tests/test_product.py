@@ -1,5 +1,7 @@
 import pytest
 from src.product import Product
+
+
 @pytest.fixture
 def correct_init_products():
     return Product("Iphone 15", "256GB, Серый цвет, 200MP камера", 180000.0, 5)

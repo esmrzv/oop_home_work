@@ -9,6 +9,7 @@ class Category:
     __products: list
 
     def __init__(self, name, description, products):
+        self.products = products
         self.name = name
         self.description = description
         self.__products = products
@@ -16,6 +17,10 @@ class Category:
         Category.all_quantity_category += 1
 
         Category.all_unique_product += len(self.__products)
+
+    @property
+    def product(self):
+        return self.__products
 
     def add_product(self, product):
         self.__products.append(product)
