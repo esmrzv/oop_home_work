@@ -1,4 +1,4 @@
-
+from src.product import Product
 
 
 class Category:
@@ -23,7 +23,10 @@ class Category:
         return self.__products
 
     def add_product(self, product):
-        self.__products.append(product)
+        if isinstance(product, Product):
+            self.__products.append(product)
+        else:
+            raise TypeError("Можно добавлять только объекты класса или его наследников")
 
     @property
     def product_info(self):
@@ -40,8 +43,3 @@ class Category:
         for product in self.__products:
             num_product += product.quantity
         return num_product
-
-
-
-
-
