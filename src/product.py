@@ -1,18 +1,16 @@
-
-
-
 class Product:
     name: str
     description: str
     __price: float
     quantity: int
+    color: str
 
-    def __init__(self, name, description, price, quantity, size):
+    def __init__(self, name, description, price, quantity, color):
         self.name = name
         self.description = description
         self.__price = price
         self.quantity = quantity
-        self.size = size
+        self.color = color
 
     @property
     def price(self):
@@ -42,17 +40,15 @@ class Product:
 
 
 class Smartphone(Product):
-    def __init__(self, name, description, price, quantity, size, performance, model, amount_memory):
-        super().__init__(name, description, price, quantity, size)
+    def __init__(self, name, description, price, quantity, color, performance, model, amount_memory):
+        super().__init__(name, description, price, quantity, color)
         self.performance = performance
         self.model = model
         self.amount_memory = amount_memory
 
 
 class LawnGrass(Product):
-    def __init__(self, name, description, price, quantity, size, country_of_origin, germination_period):
-        super().__init__(name, description, price, quantity, size)
+    def __init__(self, name, description, price, quantity, color, country_of_origin, germination_period):
+        super().__init__(name, description, price, quantity, color)
         self.country_of_origin = country_of_origin
         self.germination_period = germination_period
-
-
